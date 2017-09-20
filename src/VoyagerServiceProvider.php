@@ -66,7 +66,7 @@ class VoyagerServiceProvider extends ServiceProvider
             $this->registerAppCommands();
         }
         
-        if (env('DB_CONNECTION') === 'mysql'){
+        if (env('DB_CONNECTION') === 'mysql') {
             Schema::getConnection()->getDoctrineSchemaManager()->getDatabasePlatform()->registerDoctrineTypeMapping('enum', 'blob');
         }
     }
